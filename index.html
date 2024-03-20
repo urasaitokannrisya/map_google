@@ -18,10 +18,10 @@
             flex-direction: column; /* 要素を縦に並べる */
             align-items: center; /* 要素を中央に配置 */
         }
-        button {
+        .button {
             width: 7vw;
             height: 3vh;
-            font-size:2vh;
+            /*font-size:2vh;*/
         }
     </style>
    
@@ -45,7 +45,7 @@
                 <!--非表示のフィールドを追加 -->
                     <input type="hidden" name="entry.518300877" id="geo_data">
                         <!-- JavaScriptで位置情報を設定 -->
-                        <button onclick=" window.location.href = url;" type="submit" style="border-radius: 8px; background-color: #239aff; border: none; color: white; ">再度読み込み</button>
+                        <button  onclick=" window.location.href = url;" type="submit" style="border: none; background-color:white;"><img class="button" src="load.png"></button>
                         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"<!-- onload="if(submitted){window.location='${url}';}-->"></iframe>
                         </form>`;
 
